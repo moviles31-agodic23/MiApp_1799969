@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <!-- Barra de encabezado -->
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Contenido de la página -->
+
+  <div *ngIf="productos.length > 0">
+    <ion-card *ngFor="let producto of productos">
+      <ion-card-header>
+        {{ producto.title }}
+      </ion-card-header>
+      <ion-card-content>
+        Precio: {{ producto.price }}
+        <!-- Otros detalles del producto -->
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
